@@ -1,0 +1,6 @@
+[Resize]
+Enabled=true
+AppliesTo=Cropped area
+Method=Lanczos
+DataSpecified=1
+Width=193
