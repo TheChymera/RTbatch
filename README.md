@@ -1,6 +1,6 @@
 #RTbatch
 
-Python script for batch porcessing in RawTherapee.
+Python script for batch porcessing in [RawTherapee](https://en.wikipedia.org/wiki/RawTherapee).
 
 It can currenly process one file while iterating through a list of profiles, and generate usefule template code for publishing resulting images on [Octopress](https://github.com/imathis/octopress). RTbatch also supports automated creation of optimized mini images for web previews, all customizable from within the ```*.cgf``` configuration file. 
 
