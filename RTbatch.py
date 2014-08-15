@@ -1,11 +1,10 @@
-#!/usr/bin/env python
 __author__ = 'Horea Christian'
 from os import path, listdir, walk, remove, makedirs
 from string import Template
 from chr_helpers import save_gen, get_config_file
 import subprocess
 
-def main(input_file, output_dir="", profile="", do_fullsize=True, do_minis=True, template_name="", mini_width=""): #tweak do_template and do_export here to controll what output you get
+def main(input_file, output_dir="", iptc_profile="", do_fullsize=True, do_minis=True, template_name="", mini_width=""): #tweak do_template and do_export here to controll what output you get
     localpath = path.dirname(path.realpath(__file__)) + '/'
     config = get_config_file(localpath)
 
@@ -24,18 +23,17 @@ def main(input_file, output_dir="", profile="", do_fullsize=True, do_minis=True,
 	style = config.get('Parameters', 'style')
     if not mini_width:
 	mini_width = config.getint('Parameters', 'mini_width')
-    iptc_profile = config.get('Parameters', 'iptc_profile')
     #END IMPORT VARIABLES
     
     if style == 'NONE':
 	style = ''
     
-    if not profile:
-	picture_profile = input_file+".pp3"
+    if not iptc_profile:
+	iptc_profile = batch_profile_dir+iptc_profile
     else:
-	picture_profile = path.expanduser(profile)
+	iptc_profile = path.abspath(path.expanduser(iptc_profile))
     
-    input_file = path.expanduser(input_file)
+    input_file = path.abspath(path.expanduser(input_file))
     batch_profile_dir = localpath + batch_profile_dir
     
     profile_list = []
@@ -63,13 +61,13 @@ def main(input_file, output_dir="", profile="", do_fullsize=True, do_minis=True,
 	out_name_minis = path.splitext(path.basename(input_file))[0]+'-'+path.basename(profile)+'.jpg'
 	if do_fullsize:
 	    fullsize_destination = output_dir + out_name.replace(" ", "_")
-	    subprocess.call(['rawtherapee', '-o', fullsize_destination, '-p', profile, '-p', picture_profile, '-p', batch_profile_dir+iptc_profile, '-j[100]', '-Y', '-c', source])  
+	    subprocess.call(['rawtherapee', '-o', fullsize_destination, '-p', iptc_profile, '-p', profile, '-j[100]', '-Y', '-c', source])  
 	if do_minis:
 	    minis_folder = output_dir + minis_dir
 	    if not path.isdir(minis_folder):
 		makedirs(minis_folder)
 	    minis_destination = output_dir + minis_dir + out_name_minis.replace(" ", "_")
-	    subprocess.call(['rawtherapee', '-o', minis_destination, '-p', profile, '-p', picture_profile, '-p', batch_profile_dir+iptc_profile, '-p', mini_temp_profile_location, '-j[100]', '-Y', '-c', source])
+	    subprocess.call(['rawtherapee', '-o', minis_destination, '-p', iptc_profile, '-p', profile, '-p', mini_temp_profile_location, '-j[100]', '-Y', '-c', source])
 	if bool(template_name):
 	    full_size_link = pictures_link_path+out_name.replace(" ", "_")
 	    mini_path = '/images/photos/minis/'+out_name_minis.replace(" ", "_")

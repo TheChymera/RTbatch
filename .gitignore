@@ -46,3 +46,6 @@ img*/
 
 #git
 *.py.*
+
+#specific configs
+profiles/*
