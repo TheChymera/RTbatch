@@ -12,7 +12,7 @@ setup(
     classifiers = [],
     install_requires=[
 	"chr-helpers>=9999"
-    ]
+    ],
     dependency_links = [
     "https://github.com/TheChymera/chr-helpers/tarball/master#egg=chr-helpers-9999"
     ]
