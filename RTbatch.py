@@ -7,7 +7,7 @@ import subprocess
 def main(input_file, output_dir="", iptc_profile="", do_fullsize=True, do_minis=True, template_name="", mini_width=""): #tweak do_template and do_export here to controll what output you get
     localpath = path.dirname(path.realpath(__file__)) + '/'
     config = get_config_file(localpath)
-
+    
     #IMPORT VARIABLES
     if not output_dir:
 	output_dir = localpath+config.get('Directories', 'output_dir')
