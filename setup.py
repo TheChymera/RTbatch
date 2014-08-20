@@ -7,7 +7,7 @@ setup(
     author_email = "h.chr@mail.ru",
     url = "https://github.com/TheChymera/RTbatch",
     heywords = ["batch", "RawTherapee", "plugin"],
-    py_modules = ["RTbatch.py", "RTbatch_cli.py"],
+    py_modules = ["RTbatch", "RTbatch_cli"],
     classifiers = [],
     install_requires=[
 	"chr-helpers>=9999"
