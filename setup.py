@@ -6,13 +6,13 @@ setup(
     author = "Horea Christian",
     author_email = "h.chr@mail.ru",
     url = "https://github.com/TheChymera/RTbatch",
-    heywords = ["batch", "RawTherapee", "plugin"],
+    keywords = ["batch", "RawTherapee", "plugin"],
     py_modules = ["RTbatch", "RTbatch_cli"],
     classifiers = [],
     install_requires=[
-	"chr-helpers>=9999"
+	"chr-helpers==9999"
     ],
     dependency_links = [
-    "https://github.com/TheChymera/chr-helpers/tarball/master#egg=chr-helpers-9999"
+    "https://github.com/TheChymera/chr-helpers/tarball/master#egg=chr-helpers-9999"	
     ]
     )
