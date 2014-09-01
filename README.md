@@ -37,11 +37,11 @@ pip install [--user] -e your/local/repository/path
 * [**RawTherapee**](http://en.wikipedia.org/wiki/RawTherapee) - in Portage as **media-gfx/rawtherapee**
 
 ##Usage
-From the containing folder:
+Run the script either as `RTbatch_cli` (if installed globally), or as `./RTbatch_cli.py` from the containing folder:
 ```
-RTbatch_cli.py [-h] [-f] [-m] [-w MINI_WIDTH] [-i IPTC_PROFILE]
-                      [-o OUTPUT_DIR] [-t TEMPLATE]
-                      input
+RTbatch_cli.py  [-h] [-f] [-m] [-w MINI_WIDTH] [-i IPTC_PROFILE]
+		[-o OUTPUT_DIR] [-t TEMPLATE]
+		input
 ```
 
 Example:
