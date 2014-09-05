@@ -39,14 +39,14 @@ pip install [--user] -e your/local/repository/path
 ##Usage
 Run the script either as `RTbatch_cli` (if installed globally), or as `./RTbatch_cli.py` from the containing folder:
 ```
-RTbatch_cli.py  [-h] [-f] [-m] [-w MINI_WIDTH] [-i IPTC_PROFILE]
+RTbatch_cli  [-h] [-f] [-m] [-w MINI_WIDTH] [-i IPTC_PROFILE]
 		[-o OUTPUT_DIR] [-t TEMPLATE]
 		input
 ```
 
 Example:
 ```
-python RTbatch_cli.py -fm ~/path/to/your/pics/folder/DSC_1337.NEF -t octopress-imgcap -i ~/.config/RawTherapee4.1/profiles/your_custom_profile.pp3
+RTbatch_cli -fm ~/path/to/your/pics/folder/DSC_1337.NEF -t octopress-imgcap -i ~/.config/RawTherapee4.1/profiles/your_custom_profile.pp3
 ```
 
 ##Arguments
