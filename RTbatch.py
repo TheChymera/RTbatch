@@ -21,7 +21,7 @@ def main(input_file, output_dir="", iptc_profile=None, do_fullsize=True, do_mini
 	rt_command = config.get('Parameters', 'rt_command')
 	stock_iptc_profile = config.get('Parameters', 'iptc_profile')
 	pictures_link_path = config.get('Directories', 'pictures_link_path')
-	if 'octopress' in template_name:
+	if template_name and 'octopress' in template_name:
 		style = config.get('Parameters', 'style')
 	if not mini_width:
 		mini_width = config.getint('Parameters', 'mini_width')
