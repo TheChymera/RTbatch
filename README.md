@@ -7,7 +7,7 @@ RTbatch also supports automated creation of optimized mini images for web previe
 
 ##Installation
 
-####On [Gentoo Linux](http://en.wikipedia.org/wiki/Gentoo_linux) and Derivatives:
+####On [Gentoo Linux](http://en.wikipedia.org/wiki/Gentoo_linux) and [Derivatives](http://en.wikipedia.org/wiki/Category:Gentoo_Linux_derivatives):
 
 RTbatch is available in the [Portage](http://en.wikipedia.org/wiki/Portage_(software)) *[chymerc overlay](https://github.com/TheChymera/chymeric)* as **[app-misc/RTbatch](https://github.com/TheChymera/chymeric/tree/master/app-misc/RTbatch)**.
 Just run the following command:
