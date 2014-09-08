@@ -4,7 +4,7 @@ from string import Template
 from chr_helpers import save_gen, get_config_file
 import subprocess
 
-def main(input_file, output_dir="", iptc_profile=None, do_fullsize=True, do_minis=True, template_name="", mini_width=""): #tweak do_template and do_export here to controll what output you get
+def main(input_file, output_dir="", iptc_profile=None, do_fullsize=True, do_minis=True, template_name="", mini_width="", style=""): #tweak do_template and do_export here to controll what output you get
 	localpath = path.dirname(path.realpath(__file__)) + '/'
 	config = get_config_file(localpath)
 
@@ -28,7 +28,7 @@ def main(input_file, output_dir="", iptc_profile=None, do_fullsize=True, do_mini
 	#END IMPORT VARIABLES
 	
 	if style == 'NONE':
-		style = ''
+		style = ""
 	
 	if not iptc_profile:
 		iptc_profile = batch_profile_dir + stock_iptc_profile
