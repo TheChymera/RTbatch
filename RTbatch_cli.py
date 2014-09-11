@@ -5,8 +5,8 @@ import RTbatch as rtb
 
 parser = argparse.ArgumentParser()
 parser.add_argument("input", help="Input file for RT processing", type=str)
-parser.add_argument("-f", "--fullsize-only", help="Export files only in full-size - default exports both full-size and minis", action="store_false")
-parser.add_argument("-m", "--minis-only", help="Export file only as thumbnails (minis) - default exports both full-size and minis", action="store_false")
+parser.add_argument("-f", "--fullsize-only", help="Export files only in full-size - default exports both full-size and minis (thumbnails)", action="store_false")
+parser.add_argument("-m", "--minis-only", help="Export files only as thumbnails (minis) - default exports both full-size and minis", action="store_false")
 parser.add_argument("-w", "--mini-width", help="Thumbnail (mini) width", type=int)
 parser.add_argument("-i", "--iptc-profile", help="Path to IPTC profile (defaults to .../RTbatch/profiles/iptc.pp3)", type=str)
 parser.add_argument("-o", "--output-dir", help="Specify the output directory (by default .../RTbatch/output/)", type=str)

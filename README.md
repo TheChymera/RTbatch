@@ -57,8 +57,10 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -f, --do-fullsize     Export files in full-size
-  -m, --do-minis        Export file as thumbnails (minis)
+  -f, --fullsize-only   Export files only in full-size - default exports both
+                        full-size and minis (thumbnails)
+  -m, --minis-only      Export files only as thumbnails (minis) - default
+                        exports both full-size and minis
   -w MINI_WIDTH, --mini-width MINI_WIDTH
                         Thumbnail (mini) width
   -i IPTC_PROFILE, --iptc-profile IPTC_PROFILE
