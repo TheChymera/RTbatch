@@ -33,7 +33,7 @@ pip install [--user] -e your/local/repository/path
 ###Dependencies:
 
 ####Mandatory:
-* [**chr-helpers**](https://github.com/TheChymera/chr-helpers) - in Portage (chymeric overlay) as [**dev-python/chr-helpers**](https://github.com/TheChymera/chymeric/tree/master/dev-python/chr-helpers)!
+* [**chr-helpers**](https://github.com/TheChymera/chr-helpers) - in Portage as [**dev-python/chr-helpers**](https://github.com/TheChymera/chymeric/tree/master/dev-python/chr-helpers) (via the chymeric overlay)
 * [**RawTherapee**](http://en.wikipedia.org/wiki/RawTherapee) - in Portage as **media-gfx/rawtherapee**
 
 ##Usage
