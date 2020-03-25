@@ -1,13 +1,13 @@
-#RTbatch
+# RTbatch
 
 Python script for batch porcessing in [RawTherapee](https://en.wikipedia.org/wiki/RawTherapee).
 
 It can currenly process one file while iterating through a list of profiles, and generate useful template code for publishing resulting images on [Octopress](https://github.com/imathis/octopress). 
 RTbatch also supports automated creation of optimized mini images for web previews, all customizable from within the command line.
 
-##Installation
+## Installation
 
-####On [Gentoo Linux](http://en.wikipedia.org/wiki/Gentoo_linux) and [Derivatives](http://en.wikipedia.org/wiki/Category:Gentoo_Linux_derivatives):
+#### On [Gentoo Linux](http://en.wikipedia.org/wiki/Gentoo_linux) and [Derivatives](http://en.wikipedia.org/wiki/Category:Gentoo_Linux_derivatives):
 
 RTbatch is available in the [Portage](http://en.wikipedia.org/wiki/Portage_(software)) *[chymeric overlay](https://github.com/TheChymera/chymeric)* as **[app-misc/RTbatch](https://github.com/TheChymera/chymeric/tree/master/app-misc/RTbatch)**.
 Just run the following command:
@@ -30,13 +30,13 @@ pip install [--user] -e your/local/repository/path
 
 *Please bear in mind that this will not pull in RawTherapee, make sure you have already installed it.*
 
-###Dependencies:
+### Dependencies:
 
-####Mandatory:
+#### Mandatory:
 * [**chr-helpers**](https://github.com/TheChymera/chr-helpers) - in Portage as [**dev-python/chr-helpers**](https://github.com/TheChymera/chymeric/tree/master/dev-python/chr-helpers) (via the chymeric overlay)
 * [**RawTherapee**](http://en.wikipedia.org/wiki/RawTherapee) - in Portage as **media-gfx/rawtherapee**
 
-##Usage
+## Usage
 Run the script either as `RTbatch_cli` (if installed globally), or as `./RTbatch_cli.py` from the containing folder:
 ```
 RTbatch_cli  [-h] [-f] [-m] [-w MINI_WIDTH] [-i IPTC_PROFILE]
@@ -49,7 +49,7 @@ Example:
 RTbatch_cli -fm ~/path/to/your/pics/folder/DSC_1337.NEF -t octopress-imgcap -i ~/.config/RawTherapee4.1/profiles/your_custom_profile.pp3
 ```
 
-##Arguments
+## Arguments
 
 ```
 positional arguments:
